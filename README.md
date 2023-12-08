@@ -50,8 +50,10 @@ ___
 
 Restrições
 
-1 <= n <= 10^5
-1 <= arr[i] <= 10^5
+0 <= t1, t2 <= 2
+3 <= n <= 20
+tn pode exceder o limite de um inteiro de 64 bits.
+
 
 ## Exemplo de comando para executar código
 
