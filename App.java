@@ -1,28 +1,40 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
+        Fibonacci fibonacci = new Fibonacci();
+        fibonacci.run();
+    }
+
+}
+
+class Fibonacci implements Runnable {
+
+    @Override
+    public void run() {
         Scanner input = new Scanner(System.in);
 
-        long primeiroTermo = input.nextLong();
-        long segundoTermo = input.nextLong();
+        BigInteger primeiroTermo = input.nextBigInteger();
+        BigInteger segundoTermo = input.nextBigInteger();
 
-        long n = input.nextLong();
+        BigInteger n = input.nextBigInteger();
 
         input.close();
 
         System.out.println(imprimirFibonacci(primeiroTermo, segundoTermo, n));
     }
 
-    private static long imprimirFibonacci(long primeiroTermo, long segundoTermo, long n) {
-        long proximoTermo = 0;
-        for (long i = 2; i < n; i++) {
-            proximoTermo = primeiroTermo + (segundoTermo * segundoTermo);
+    private static BigInteger imprimirFibonacci(BigInteger primeiroTermo, BigInteger segundoTermo, BigInteger n) {
+        BigInteger proximoTermo = BigInteger.ZERO;
+        for (BigInteger i = BigInteger.valueOf(2); i.compareTo(n) < 0; i = i.add(BigInteger.ONE)) {
+            proximoTermo = primeiroTermo.add(segundoTermo.multiply(segundoTermo));
             primeiroTermo = segundoTermo;
             segundoTermo = proximoTermo;
         }
 
         return proximoTermo;
     }
+
 }
