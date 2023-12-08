@@ -53,9 +53,9 @@ Restrições
 1 <= n <= 10^5
 1 <= arr[i] <= 10^5
 
-### Exemplo de comando para executar código
+## Exemplo de comando para executar código
 
-## Exemplo 1
+### Exemplo 1
 
 Exemplo de Input 1
 
@@ -73,7 +73,7 @@ Explicação Output 1
 
 O sexto termo da sequência é 27.
 
-## Exemplo 2
+### Exemplo 2
 
 Exemplo de Input 2
 
