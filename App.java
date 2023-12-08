@@ -26,7 +26,7 @@ class Fibonacci implements Runnable {
         System.out.println(imprimirFibonacci(primeiroTermo, segundoTermo, n));
     }
 
-    private static BigInteger imprimirFibonacci(BigInteger primeiroTermo, BigInteger segundoTermo, BigInteger n) {
+    private BigInteger imprimirFibonacci(BigInteger primeiroTermo, BigInteger segundoTermo, BigInteger n) {
         BigInteger proximoTermo = BigInteger.ZERO;
         for (BigInteger i = BigInteger.valueOf(2); i.compareTo(n) < 0; i = i.add(BigInteger.ONE)) {
             proximoTermo = primeiroTermo.add(segundoTermo.multiply(segundoTermo));
